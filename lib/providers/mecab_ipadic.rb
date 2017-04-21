@@ -33,8 +33,8 @@ class Ve
         output = []
 
         while line = @stdout.readline #.force_encoding('UTF-8')
-          if line =~ /#{BIT_STOP}/x
-            output << @stdout.readline # Catch the EOS
+          if line =~ /VeEnd/x
+              output << @stdout.readline # Catch the EOS
             break
           end
           output << line
