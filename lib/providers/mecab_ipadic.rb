@@ -33,7 +33,7 @@ class Ve
         output = []
 
         while line = @stdout.readline.force_encoding('UTF-8')
-          if line == "VeEnd"
+          if line.strip == BIT_STOP
               output << @stdout.readline # Catch the EOS
             break
           end
