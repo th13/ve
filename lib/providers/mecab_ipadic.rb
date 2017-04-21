@@ -32,7 +32,7 @@ class Ve
         @stdin.puts "#{text} #{BIT_STOP}"
         output = []
 
-        while line = @stdout.readline #.force_encoding('UTF-8')
+        while line = @stdout.readline.force_encoding('UTF-8')
           if line =~ /VeEnd/x
               output << @stdout.readline # Catch the EOS
             break
